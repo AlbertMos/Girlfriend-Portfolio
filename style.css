@@ -16,6 +16,8 @@ body{
   background: #1F2E2B;
   font-family: "Merriweather","Helvetica Neue",Arial,sans-serif;
   box-sizing: border-box;
+  width: auto;
+  height: auto;
 
 }
 
@@ -68,21 +70,31 @@ body{
 
   @media (max-width: 768px) {
     .img-small {
-      width: auto; /* Dostosuj szerokość do swoich preferencji */
-  height: 200px; /* Ustaw wysokość na taką samą wartość, aby uzyskać pełne koło */
-  border-radius: 50%; /* Ustawienie border-radius na 50% powoduje zaokrąglenie do kształtu koła */
+      width: auto; 
+  height: 200px; 
+  border-radius: 50%; 
   overflow: hidden; 
     }
   }
-  @media (min-width: 1200px){
+  @media (min-width: 769px){
+    .img-small{
+     height: 400px;
+     width: auto;
+     
+   }}
+   
+   
+  @media (min-width: 1400px){
    .img-small{
     height: 600px;
     width: auto;
     
   }}
 
-
   
+  
+  
+
 .animated-text::before {
     content: "Hi, my name is Monika Węgłowska";
     animation: text-animation 10s infinite;
