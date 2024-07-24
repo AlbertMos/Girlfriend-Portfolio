@@ -4,130 +4,138 @@ html {
   overflow-x: hidden;
 }
 
-
-
-
 section {
   scroll-snap-align: start;
 }
 
-
-body{
+body {
   background: #1F2E2B;
-  font-family: "Merriweather","Helvetica Neue",Arial,sans-serif;
+  font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
   box-sizing: border-box;
   width: auto;
   height: auto;
-
 }
-
 
 #mainNav {
-    border-bottom: 1px solid rgba(33,37,41,.1);
-    font-family: "Open Sans","Helvetica Neue",Arial,sans-serif;
-    border-color: transparent;
-    background-color: transparent;
-    }
-  
+  border-bottom: 1px solid rgba(33, 37, 41, .1);
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  border-color: transparent;
+  background-color: transparent;
+}
+
 .image-container {
-    overflow: hidden;
-    
-  }
-  
+  overflow: hidden;
+}
+
 .hover-zoom:hover {
-    
-    filter: brightness(120%);
+  filter: brightness(120%);
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-  }
+}
 
 @keyframes pulsate {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 .pulsate {
-    animation: pulsate 10s infinite;
-  }
+  animation: pulsate 10s infinite;
+}
 
 @keyframes text-animation {
-    0% {
-      content: "Hi, my name is Monika Węgłowska";
-    }
-    50% {
-      content: "I'm Data Specialist";
-    }
-    100% {
-      content: "Hi, my name is Monika Węgłowska";
-    }
+  0% {
+    content: "Hi, my name is Monika Węgłowska";
+  }
+  50% {
+    content: "I'm Data Specialist";
+  }
+  100% {
+    content: "Hi, my name is Monika Węgłowska";
+  }
+}
+
+@media (max-width: 768px) {
+  .img-small {
+    width: auto;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
   }
 
-  @media (max-width: 768px) {
-    .img-small {
-      width: auto; 
-  height: 200px; 
-  border-radius: 50%; 
-  overflow: hidden; 
-    }
+  .about-size {
+    height: auto;
   }
-  @media (min-width: 769px){
-    .img-small{
-     height: 400px;
-     width: auto;
-     
-   }}
-   
-   
-  @media (min-width: 1400px){
-   .img-small{
+
+  .experience-text-size {
+    font-size: 15px;
+  }
+
+  .experience-header-size {
+    font-size: 22px;
+  }
+
+  .vh-100 {
+    height: auto !important;
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-small {
+    height: 400px;
+    width: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .img-small {
     height: 600px;
     width: auto;
-    
-  }}
-
-  
-  
-  
+  }
+}
 
 .animated-text::before {
-    content: "Hi, my name is Monika Węgłowska";
-    animation: text-animation 10s infinite;
-  }
+  content: "Hi, my name is Monika Węgłowska";
+  animation: text-animation 10s infinite;
+}
 
-  .dimmed-div {
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-  }
-  
+.dimmed-div {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
 .dimmed-div:hover {
-    opacity: 1;
-  }
+  opacity: 1;
+}
 
 #btn {
-    position: fixed;
-    bottom: 10px;
-    right: 48.5%;
-    font-size:20px;
-    cursor: pointer;
-    padding: 15px;
-    
+  font-size: 20px;
+  cursor: pointer;
+  padding: 15px;
 }
-.custom-arrow{
-  
+
+.arrow-container {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.custom-arrow {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  
-  transition: transform 0.3s; /* Czas trwania animacji */
+  transition: transform 0.3s;
+  color: red;
 }
 
 .arrow-container:hover .custom-arrow {
-  transform: scale(1.5); /* Zwiększenie rozmiaru strzałki po najechaniu */
+  transform: scale(1.5);
 }
 
 .flip-card {
@@ -144,14 +152,15 @@ body{
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -163,18 +172,18 @@ body{
   transform: rotateY(180deg);
 }
 
-.progress{
+.progress {
   height: 30px;
   background: #fff;
   border-top: 5px solid #1c2647;
   border-bottom: 5px solid #1c2647;
   border-radius: 0;
-  
   overflow: visible;
   position: relative;
 }
+
 .progress:before,
-.progress:after{
+.progress:after {
   content: "";
   width: 5px;
   background: #1c2647;
@@ -183,21 +192,76 @@ body{
   left: -5px;
   bottom: 0;
 }
-.progress:after{
+
+.progress:after {
   left: auto;
   right: -5px;
 }
-.progress .progress-bar{
+
+.progress .progress-bar {
   border: none;
   box-shadow: none;
-  -webkit-animation: 0.5s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
-  animation: 0.5s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
-}
-@-webkit-keyframes animate-positive{
-  0%{ width: 0; }
-}
-@keyframes animate-positive{
-  0%{ width: 0; }
+  -webkit-animation: 0.5s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
+  animation: 0.5s linear 0s normal none infinite running progress-bar-stripes, animate-positive 1s;
 }
 
+@-webkit-keyframes animate-positive {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes animate-positive {
+  0% {
+    width: 0;
+  }
+}
+
+.section-title {
+  margin-top: 2rem;
+}
+
+.container.d-flex.flex-grow-1 {
+  margin-top: -2rem;
+}
+
+footer {
+  background-color: #1F2E2B;
+  color: rgb(229, 231, 235);
+}
+
+footer h5 {
+  font-family: Roboto, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-family: Roboto, sans-serif;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: rgb(229, 231, 235);
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #f94921;
+}
+
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    justify-content: center;
+  }
+
+  .navbar .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar .nav-item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
 
